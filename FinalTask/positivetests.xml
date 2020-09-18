@@ -1,0 +1,58 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name ="Positive Smoke Tests" verbose="1">
+    <test name="AddToCartTests">
+        <classes>
+            <class name ="ASOS.tests.AddToCartTests">
+                <methods>
+                    <include name="heckIfPriceIncrementsWithAddingProducts"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="AddToFavoritesTests">
+        <classes>
+            <class name = "ASOS.tests.AddToFavoritesTests">
+                <methods>
+                    <include name="checkAddingProductToFavorites"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name ="ChangeCountryTests">
+        <classes>
+            <class name = "ASOS.tests.ChangeCountryTests">
+                <methods>
+                    <include name ="checkIfCountryChangeIsPossible"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name ="CheckOutTests">
+        <classes>
+            <class name="ASOS.tests.CheckOutTests">
+                <methods>
+                    <include name="checkIfCheckOutWithoutSigningInIsPossible"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name ="RemoveFromCartTests">
+        <classes>
+            <class name = "ASOS.tests.RemoveFromCartTests">
+                <methods>
+                    <include name ="checkRemovingFromCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name = "SearchTests">
+        <classes>
+            <class name ="ASOS.tests.SearchTests">
+                <methods>
+                    <include name ="checkSearchThroughDropMenu"/>
+                    <include name ="checkApplyingFilters"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

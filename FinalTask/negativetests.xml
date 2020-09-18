@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name ="Negative Smoke Tests" verbose="1">
+    <test name="AddToCartTests">
+        <classes>
+            <class name ="ASOS.tests.AddToCartTests">
+                <methods>
+                    <include name="checkIfAddingToCartWithoutSizeIndicatingIsPossible"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="SearchTests">
+        <classes>
+            <class name ="ASOS.tests.SearchTests">
+                <methods>
+                    <include name="checkSearchWithNonExistingSearchInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name ="SignUpTests">
+        <classes>
+            <class name ="ASOS.tests.SignUpTests">
+                <methods>
+                    <include name ="signingUpWithInvalidCredentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
